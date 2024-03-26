@@ -30,6 +30,7 @@ class Meals extends StatelessWidget {
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.favorite))
         ],
+        backgroundColor: category.color,
       ),
       body: Center(child: widget),
     );
