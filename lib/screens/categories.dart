@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/data/category_data.dart';
 import 'package:mealsapp/models/category.dart';
+import 'package:mealsapp/screens/favorites.dart';
 import 'package:mealsapp/screens/meals.dart';
 import 'package:mealsapp/widgets/category_card.dart';
 
@@ -29,6 +30,17 @@ class Categories extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const Favorites(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.favorite))
+        ],
         backgroundColor: const Color.fromARGB(255, 186, 139, 255),
       ),
       body: GridView(
