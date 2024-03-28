@@ -8,10 +8,13 @@ class Categories extends StatelessWidget {
   const Categories({super.key});
 
   void _changeScreen(Category c, BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(
+    Navigator.of(context).push(
+      MaterialPageRoute(
         builder: (context) => Meals(
-              category: c,
-            )));
+          category: c,
+        ),
+      ),
+    );
   }
 
   @override
